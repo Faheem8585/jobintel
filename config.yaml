@@ -1,0 +1,139 @@
+database:
+  path: "data/jobintel.db"
+  backup_dir: "data/backups"
+
+candidate:
+  name: "Faheem"
+  target_roles:
+    - "AI Engineer"
+    - "Data Scientist"
+    - "Machine Learning Engineer"
+    - "Python Developer"
+    - "Computer Vision Engineer"
+  target_locations:
+    - "Berlin"
+    - "Munich"
+    - "Hamburg"
+    - "Remote"
+  target_countries:
+    - "Germany"
+  cv_path: "data/candidate_profile.json"
+
+scoring:
+  # Weights for match scoring (must sum to 1.0)
+  skills_weight: 0.50
+  experience_weight: 0.25
+  education_weight: 0.15
+  location_weight: 0.10
+  # Minimum score thresholds
+  strong_match_threshold: 0.75
+  good_match_threshold: 0.55
+  weak_match_threshold: 0.35
+
+digest:
+  schedule_cron: "0 8 * * *"  # 08:00 daily
+  lookback_days: 7
+  upcoming_deadline_days: 3
+
+search:
+  default_location: "Germany"
+  results_per_query: 20
+  sources:
+    - "linkedin"
+    - "indeed"
+    - "stepstone"
+    - "xing"
+
+logging:
+  level: "INFO"
+  file: "logs/jobintel.log"
+  max_bytes: 5242880  # 5 MB
+  backup_count: 3
+
+seniority:
+  levels:
+    - "intern"
+    - "junior"
+    - "mid"
+    - "senior"
+    - "lead"
+    - "principal"
+    - "staff"
+  junior_keywords:
+    - "junior"
+    - "entry level"
+    - "entry-level"
+    - "graduate"
+    - "trainee"
+    - "werkstudent"
+    - "0-2 years"
+    - "1 year"
+  senior_keywords:
+    - "senior"
+    - "lead"
+    - "principal"
+    - "staff"
+    - "5+ years"
+    - "7+ years"
+    - "10+ years"
+  tech_categories:
+    languages:
+      - python
+      - java
+      - javascript
+      - typescript
+      - golang
+      - rust
+      - c++
+      - scala
+      - r
+      - kotlin
+      - swift
+    ml_frameworks:
+      - pytorch
+      - tensorflow
+      - keras
+      - scikit-learn
+      - huggingface
+      - transformers
+      - jax
+      - xgboost
+      - lightgbm
+    data_tools:
+      - sql
+      - spark
+      - kafka
+      - airflow
+      - dbt
+      - pandas
+      - numpy
+      - polars
+    cloud:
+      - aws
+      - gcp
+      - azure
+      - docker
+      - kubernetes
+      - terraform
+    cv_tools:
+      - opencv
+      - pillow
+      - torchvision
+      - detectron2
+      - yolo
+      - mmdetection
+    llm_tools:
+      - langchain
+      - llamaindex
+      - openai
+      - anthropic
+      - vector database
+      - rag
+      - fine-tuning
+    web_frameworks:
+      - fastapi
+      - flask
+      - django
+      - fastapi
+      - streamlit
+      - gradio
