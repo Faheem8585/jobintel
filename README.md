@@ -4,6 +4,8 @@
 
 I built this to automate the repetitive parts of my job search — parsing JDs, tracking where I've applied, figuring out which skills I'm missing, and getting a quick daily summary of my pipeline. It's structured as a modular skill with a CLI, REST API, Streamlit dashboard, and MCP server interface.
 
+`Python` `FastAPI` `Streamlit` `SQLite` `Pydantic v2` `MCP` `httpx` `BeautifulSoup4` `lxml` `Regex` `NLP` `TF-IDF` `Fuzzy Matching` `REST API` `OpenAPI` `Docker` `pytest` `flake8` `black` `mypy` `CRUD` `State Machine` `Weighted Scoring` `Web Scraping` `Multi-Source Aggregation` `Caching` `Thread Safety` `Config-Driven Architecture` `Modular Design` `Separation of Concerns` `Data Validation` `Type Hints` `CI-Ready` `PEP 8`
+
 ---
 
 ## Tech Stack
