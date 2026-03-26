@@ -2,7 +2,7 @@
 
 **Intelligent job search & application tracking for the German tech market**
 
-I built this to automate the repetitive parts of my job search — parsing JDs, tracking where I've applied, figuring out which skills I'm missing, and getting a quick daily summary of my pipeline. It's structured as a modular skill with a CLI, REST API, Streamlit dashboard, and MCP server interface.
+I built this to automate the repetitive parts of my job search parsing JDs, tracking where I've applied, figuring out which skills I'm missing, and getting a quick daily summary of my pipeline. It's structured as a modular skill with a CLI, REST API, Streamlit dashboard, and MCP server interface.
 
 ![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white)
 ![FastAPI](https://img.shields.io/badge/FastAPI-0.109+-009688?style=flat&logo=fastapi&logoColor=white)
@@ -93,17 +93,17 @@ skill.py  <--  handle_tool_call(tool_name, params)
 
 ### Design Decisions
 
-**Separation of concerns** — the data layer (`database/`), business logic (`analyzers/`, `tracker/`, `digest/`), and interface (`skill.py`, `api.py`) are isolated so each can be tested and swapped independently.
+**Separation of concerns**  the data layer (`database/`), business logic (`analyzers/`, `tracker/`, `digest/`), and interface (`skill.py`, `api.py`) are isolated so each can be tested and swapped independently.
 
-**Pydantic v2 for validation** — all domain objects are Pydantic models. External input is never trusted raw; it goes through model validation before hitting the DB.
+**Pydantic v2 for validation**  all domain objects are Pydantic models. External input is never trusted raw; it goes through model validation before hitting the DB.
 
-**Thread-safe DB** — `DatabaseManager` uses a `threading.Lock` to serialise writes, so concurrent tool calls don't corrupt the database.
+**Thread-safe DB**  `DatabaseManager` uses a `threading.Lock` to serialise writes, so concurrent tool calls don't corrupt the database.
 
-**Config-driven** — no hardcoded thresholds. All weights, keywords, locations live in `config.yaml` so you can tweak behaviour without touching code.
+**Config-driven**  no hardcoded thresholds. All weights, keywords, locations live in `config.yaml` so you can tweak behaviour without touching code.
 
-**Fuzzy skill matching** — the gap analyser uses an alias table (`sklearn` <-> `scikit-learn`, `torch` <-> `pytorch`) plus substring matching to handle the messiness of real-world JD text.
+**Fuzzy skill matching**  the gap analyser uses an alias table (`sklearn` <-> `scikit-learn`, `torch` <-> `pytorch`) plus substring matching to handle the messiness of real-world JD text.
 
-**State machine for applications** — invalid status transitions (e.g. Wishlist -> Offer) raise `ValueError`. This keeps the data clean and reflects how hiring pipelines actually work.
+**State machine for applications**  invalid status transitions (e.g. Wishlist -> Offer) raise `ValueError`. This keeps the data clean and reflects how hiring pipelines actually work.
 
 ---
 
