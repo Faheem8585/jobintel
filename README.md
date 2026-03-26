@@ -4,7 +4,34 @@
 
 I built this to automate the repetitive parts of my job search — parsing JDs, tracking where I've applied, figuring out which skills I'm missing, and getting a quick daily summary of my pipeline. It's structured as a modular skill with a CLI, REST API, Streamlit dashboard, and MCP server interface.
 
-`Python` `FastAPI` `Streamlit` `SQLite` `Pydantic v2` `MCP` `httpx` `BeautifulSoup4` `lxml` `Regex` `NLP` `TF-IDF` `Fuzzy Matching` `REST API` `OpenAPI` `Docker` `pytest` `flake8` `black` `mypy` `CRUD` `State Machine` `Weighted Scoring` `Web Scraping` `Multi-Source Aggregation` `Caching` `Thread Safety` `Config-Driven Architecture` `Modular Design` `Separation of Concerns` `Data Validation` `Type Hints` `CI-Ready` `PEP 8`
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=flat&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.109+-009688?style=flat&logo=fastapi&logoColor=white)
+![Streamlit](https://img.shields.io/badge/Streamlit-1.31+-FF4B4B?style=flat&logo=streamlit&logoColor=white)
+![SQLite](https://img.shields.io/badge/SQLite-3.x-003B57?style=flat&logo=sqlite&logoColor=white)
+![Pydantic](https://img.shields.io/badge/Pydantic-v2-E92063?style=flat&logo=pydantic&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?style=flat&logo=docker&logoColor=white)
+![pytest](https://img.shields.io/badge/pytest-87%25_coverage-0A9EDC?style=flat&logo=pytest&logoColor=white)
+
+![httpx](https://img.shields.io/badge/httpx-0.26+-764ABC?style=flat)
+![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup4-4.12+-43B02A?style=flat)
+![lxml](https://img.shields.io/badge/lxml-5.1+-orange?style=flat)
+![MCP](https://img.shields.io/badge/MCP-1.26+-blueviolet?style=flat)
+![uvicorn](https://img.shields.io/badge/uvicorn-0.27+-2C8EBB?style=flat)
+![YAML](https://img.shields.io/badge/PyYAML-6.0+-yellow?style=flat)
+
+![REST API](https://img.shields.io/badge/REST_API-OpenAPI_Docs-green?style=flat)
+![Web Scraping](https://img.shields.io/badge/Web_Scraping-Multi--Source-blue?style=flat)
+![NLP](https://img.shields.io/badge/NLP-Regex_+_Keyword_Matching-red?style=flat)
+![Fuzzy Matching](https://img.shields.io/badge/Fuzzy_Matching-Alias_Resolution-orange?style=flat)
+![Weighted Scoring](https://img.shields.io/badge/Scoring-4D_Weighted_Composite-purple?style=flat)
+![State Machine](https://img.shields.io/badge/State_Machine-Pipeline_Enforcement-critical?style=flat)
+![Caching](https://img.shields.io/badge/Caching-SQLite_TTL-lightgrey?style=flat)
+![Thread Safe](https://img.shields.io/badge/Thread_Safe-Lock_Protected-informational?style=flat)
+
+![License](https://img.shields.io/badge/License-MIT-green?style=flat)
+![Status](https://img.shields.io/badge/Status-Production-brightgreen?style=flat)
+![Code Style](https://img.shields.io/badge/Code_Style-PEP8_+_Black-black?style=flat)
+![Type Hints](https://img.shields.io/badge/Type_Hints-mypy_checked-blue?style=flat)
 
 ---
 
